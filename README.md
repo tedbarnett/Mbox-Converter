@@ -1,5 +1,5 @@
 # Mbox-Converter
-Python app to convert email mbox file to markdown format for use in AI and Langchain
+Python app to convert email mbox file to text/markdown format for use in AI and Langchain
 
 In order to make it possible to "talk to yourself" with AI, you first need a reliable source of text that represents your "voice".  One great source for that might be your own Sent Emails over the last few years.  
 
@@ -11,8 +11,8 @@ This app reads through the mbox and cleans it up by...
 - Writing all of this out into a simple text file
 
 Instructions:
-- Export an mbox file from your Sent Emails (using Apple Mail or Google Takeout).  Rename it "convert-me.mbox"
-- Pull down the Repo
+- Export an mbox file from your Sent Emails (using Apple Mail or Google Takeout)
+- Rename that mbox file "convert-me.mbox"
 - Rename the file "RENAME_THIS_config.py" to "config.py"
 - Edit this config.py file to include your own OpenAI API key
 - Copy your mbox file into the folder "mbox-source" and make sure it is named "convert-me.mbox"
