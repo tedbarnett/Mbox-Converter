@@ -13,7 +13,8 @@ This app reads through the mbox and cleans it up by...
 Instructions:
 - Export an mbox file from your Sent Emails (using Apple Mail or Google Takeout)
 - Pull down the Repo
-- Edit the config.py file to include your own OpenAI API key
+- Rename the file "RENAME_THIS_config.py" to "config.py"
+- Edit this config.py file to include your own OpenAI API key
 - Copy your mbox file into this directory and name it "convert-me.mbox"
 - Install html2txt (pip install html2txt)
 - Run the script mbox-convert.py
