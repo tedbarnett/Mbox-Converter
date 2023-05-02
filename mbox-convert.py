@@ -37,7 +37,6 @@ non_text_messages = 0
 
 for msg in all_mails:
     if msg['from'] and username in msg['from']:
-        print(f"username = {username}")
         body = ""
         if msg.is_multipart():
             for part in msg.walk():
