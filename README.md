@@ -16,10 +16,10 @@ Instructions:
 - Rename the file "RENAME_THIS_config.py" to "config.py"
 - Edit this config.py file to include your own OpenAI API key
 - Copy your mbox file into the folder "mbox-source" and make sure it is named "convert-me.mbox"
-- Install html2txt (pip install html2txt)
+- Install html2txt (in Terminal: "pip install html2txt")
 - Run the script mbox-convert.py
 - Will take several minutes (depending on size of your mbox file)
-- Result will be in the file "converted-mbox.txt"
+- Result will be in the file "converted-mbox.md" (can open with any text editor to review)
 - Use langchain or other services to make an LLM based on the mbox
 
 
