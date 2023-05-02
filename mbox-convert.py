@@ -1,3 +1,8 @@
+# Python script to clean up mbox file mbox-source/convert-me.mbox and save
+# as converted-mbox.md
+# Written by Ted Barnett, with help from ChatGPT-4
+# May 1, 2023
+
 import mailbox
 import time
 import email
@@ -14,6 +19,9 @@ mbox_file = 'mbox-source/convert-me.mbox'
 output_file = 'converted-mbox.md'
 unwanted_text = "unsubscribe"
 
+if os.path.exists(output_file):
+    os.remove(output_file) # delete old output_file before starting
+
 current_timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
 # output_file = f"{current_timestamp}_{output_file}" # optional to include timestamp
 
@@ -29,6 +37,7 @@ non_text_messages = 0
 
 for msg in all_mails:
     if msg['from'] and username in msg['from']:
+        print(f"username = {username}")
         body = ""
         if msg.is_multipart():
             for part in msg.walk():
@@ -74,7 +83,7 @@ with open(output_file, "a", encoding="utf-8") as f:
         f.write("\n")
 
 print(f"\n*** Conversion complete at {datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}")
-print(f"Total emails processed: {len(all_mails)}")
-print(f"Unsubscribe emails skipped: {unsubscribe_count}")
-print(f"Emails not from {username}: {not_username_count}")
-print(f"Non-text messages skipped: {non_text_messages}")
+print(f"- Total emails processed: {len(all_mails)}")
+print(f"- Unsubscribe emails skipped: {unsubscribe_count}")
+print(f"- Emails not from {username}: {not_username_count}")
+print(f"- Non-text messages skipped: {non_text_messages}\n")
