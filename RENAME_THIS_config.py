@@ -1,0 +1,1 @@
+openai_api_key = "PASTE IN YOUR OPENAI API KEY HERE"
